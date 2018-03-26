@@ -1,0 +1,5 @@
+% rebase("base")
+<p>Todo</p>
+<a href="/new">New</a>
+<a href="/todo">Opened item</a>
+<a href="/edit/1">Edit item</a>
