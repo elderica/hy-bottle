@@ -1,6 +1,6 @@
 .PHONY: all
 all:
-	@echo "First you need run 'pip install pip-tools && make dep' to install dependencies."
+	@echo "First you need run 'pip install pip-tools && make deps' to install dependencies."
 	@echo "Run 'make prepare' to create a database."
 	@echo "To run as debug mode, run 'make dev'."
 	@echo "To run as production mode, run 'make prod'."
