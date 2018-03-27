@@ -7,15 +7,11 @@ all:
 
 .PHONY: dev
 dev:
-	PYTHONDONTWRITEBYTECODE=1 bottle.py --bind=0.0.0.0:8080 --server=wsgiref --debug --reload adapter:app
+	bottle.py --bind=0.0.0.0:8080 --server=wsgiref --debug --reload adapter:app
 
 .PHONY: prod
 prod:
-	PYTHONDONTWRITEBYTECODE=1 bottle.py --bind=0.0.0.0:8080 --server=waitress adapter:app
-
-.PHONY: hy
-hy:
-	PYTHONDONTWRITEBYTECODE=1 hy
+	bottle.py --bind=0.0.0.0:8080 --server=waitress adapter:app
 
 .PHONY: deps
 deps:
