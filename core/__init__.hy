@@ -8,10 +8,6 @@
                 (first (split d))
                 d)
             "templates/")))
-
-;(.append TEMPLATE_PATH
-;  (join (dirname (abspath __file__))
-;        "templates/"))
 (.append TEMPLATE_PATH (locate_template-path))
 
 (setv app (Bottle))
