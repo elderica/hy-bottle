@@ -11,7 +11,7 @@ dev:
 
 .PHONY: prod
 prod:
-	bottle.py --bind=0.0.0.0:8080 --server=waitress adapter:app
+	bottle.py --bind=0.0.0.0:8080 --server=wsgiref adapter:app
 
 .PHONY: deps
 deps:
