@@ -1,15 +1,18 @@
 (import (os.path (abspath split splitext join dirname))
         (glob (glob)))
 
+(defn find-for [pat]
+  (glob (join (dirname __file__) pat)))
+
 (defn find-all-controllers-from-sources []
   (list-comp
-    (second (split (first (splitext file))))
-    (file (glob (join (dirname __file__) "*.hy")))))
+    (-> file split second splitext first)
+    (file (find-for "*.hy"))))
 
 (defn find-all-controllers-from-pycache []
   (list-comp
-    (first (splitext (second (split (first (splitext file))))))
-    (file (glob (join (dirname __file__) "*.pyc")))))
+    (-> file split second splitext first splitext first)
+    (file (find-for "*.pyc"))))
 
 (defn find-all-controllers []
   (do (setv d (dirname (abspath __file__)))
