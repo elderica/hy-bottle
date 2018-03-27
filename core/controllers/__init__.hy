@@ -15,6 +15,6 @@
   (do (setv d (dirname (abspath __file__)))
       (if (= (second (split d)) "__pycache__")
           (find-all-controllers-from-pycache)
-	  (find-all-controllers-from-sources))))
+          (find-all-controllers-from-sources))))
 
 (setv __all__ (find-all-controllers))

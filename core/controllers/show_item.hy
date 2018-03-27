@@ -6,5 +6,5 @@
   (defn show-item [item]
     (do (setv result (.search-by-id (Todo) item))
         (if result
-	   (.format "Task: {}" (first (first result)))
-	   "This item does not exist!"))))
+            (.format "Task: {}" (first (first result)))
+            "This item does not exist!"))))
