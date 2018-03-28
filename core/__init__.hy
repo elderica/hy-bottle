@@ -8,7 +8,7 @@
                 (first (split d))
                 d)
             "templates/")))
-(.append TEMPLATE_PATH (locate_template-path))
+(.append TEMPLATE_PATH (locate-template-path))
 
 (setv app (Bottle))
 
